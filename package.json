@@ -27,7 +27,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index.js",
+    "client:dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -35,6 +36,7 @@
     "seed:dev": "node ./db/seed.js",
     "sendAlerts": "node ./api/sendNotifications.js"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

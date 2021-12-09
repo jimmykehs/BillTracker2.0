@@ -22,18 +22,7 @@ function createUpdateString(updateData) {
   return UPDATE_STRING;
 }
 
-async function attachBillstoUser(user) {
-  try {
-    const bills = await getBillsByUserID(user.user_id);
-    user.bills = bills;
-    return user;
-  } catch (error) {
-    console.log(err);
-  }
-}
-
 module.exports = {
-  attachBillstoUser,
   createArgumentString,
   createUpdateString,
 };

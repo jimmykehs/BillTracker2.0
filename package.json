@@ -35,7 +35,6 @@
     "seed:dev": "node ./db/seed.js",
     "sendAlerts": "node ./api/sendNotifications.js"
   },
-  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

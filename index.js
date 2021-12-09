@@ -14,8 +14,8 @@ app.use(cors());
 
 app.use("/api", apiRouter);
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(PORT, () => {

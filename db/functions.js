@@ -1,5 +1,3 @@
-const { getBillsByUserID } = require("./_Read");
-
 function createArgumentString(queryValues) {
   let ARGUMENT_STRING = "";
   for (let i = 1; i <= queryValues.length; i++) {

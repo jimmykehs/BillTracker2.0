@@ -1,0 +1,95 @@
+#SignInContainer {
+  height: 100vh;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SignInContainer h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#SignInContainer .LoginError {
+  color: red;
+}
+
+#SignInContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#SignInContainer form button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 15px;
+  margin-right: 35px;
+}
+
+#SignInContainer form .toggle-sign-in {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+#SignInContainer form .toggle-sign-in:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#SignInContainer #SignInBox {
+  background-color: #ffffff;
+  border-radius: 20px;
+  height: 365px;
+  width: 650px;
+  padding: 25px 50px 25px 25px;
+  position: relative;
+}
+
+#SignInContainer #SignInBox #box-stripe {
+  background-color: #15a86a;
+  height: 100%;
+  width: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#SignInContainer #SignUpBox {
+  background-color: #ffffff;
+  border-radius: 20px;
+  height: 650px;
+  width: 365px;
+  padding: 25px 25px 50px 25px;
+  position: relative;
+}
+
+#SignInContainer #SignUpBox #box-stripe {
+  background-color: #15a86a;
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+/*# sourceMappingURL=UserLogin.css.map */

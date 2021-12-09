@@ -1,0 +1,250 @@
+#Dashboard {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#navBar {
+  position: absolute;
+  height: 100vh;
+  width: 250px;
+  background-color: #484349;
+  z-index: 2;
+}
+
+#navBar h1 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  padding: 25px 0;
+}
+
+#navBar .navItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+#navBar .navItem .mainItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navBar .navItem .mainItem img {
+  height: 40px;
+  width: 40px;
+}
+
+#navBar .navItem .mainItem a,
+#navBar .navItem .mainItem #logout-btn {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 26px;
+}
+
+#navBar .navItem .mainItem a:hover,
+#navBar .navItem .mainItem #logout-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#navBar .navItem .subItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+}
+
+#navBar .navItem .subItems label {
+  margin-left: 15px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-left: 5px solid white;
+}
+
+#navBar .navItem .subItems a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#navBar .logout {
+  position: absolute;
+  bottom: 0;
+}
+
+#mainContent {
+  height: 100%;
+  width: 100%;
+  padding-left: 250px;
+  padding-bottom: 125px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainContent #addBills {
+  height: 15%;
+  width: 100%;
+  background-color: #e3e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainContent #addBills form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainContent #addBills form .formGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+
+#mainContent #allBills {
+  margin-top: 40px;
+  height: 75%;
+  width: 45%;
+  min-width: 650px;
+  overflow: scroll;
+  overscroll-behavior: none;
+}
+
+#mainContent #allBills table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+#mainContent #allBills table td,
+#mainContent #allBills table th {
+  padding: 10px;
+}
+
+#mainContent #allBills table th {
+  text-align: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ededed;
+  font-size: 24px;
+}
+
+#mainContent #allBills table td {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#mainContent #allBills table tbody tr td {
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+}
+
+#mainContent #allBills table .nameColumn,
+#mainContent #allBills table .optionsColumn {
+  width: 200px;
+}
+
+#mainContent #allBills table .priceColumn {
+  width: 150px;
+}
+
+#mainContent #allBills table .priceColumn input {
+  width: 80%;
+}
+
+#mainContent #allBills table button {
+  padding: 5px;
+  width: 75px;
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(112, 112, 112, 0.15);
+  border-radius: 6px;
+}
+
+#mainContent #allBills table .billPaidButton {
+  background-color: #15a86a;
+}
+
+#mainContent #allBills table .billUnpaidButton {
+  background-color: #db3333;
+}
+
+#mainContent #allBills table img {
+  height: 50px;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+#mainContent #allBills table img:hover {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+
+#totalFooter {
+  width: 100vw;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #15a86a;
+  z-index: 1;
+  -webkit-box-shadow: 0 -8px 15px rgba(21, 168, 106, 0.19);
+          box-shadow: 0 -8px 15px rgba(21, 168, 106, 0.19);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 36px;
+  padding: 50px;
+}
+/*# sourceMappingURL=dashboard.css.map */

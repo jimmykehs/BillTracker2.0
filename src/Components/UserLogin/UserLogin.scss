@@ -1,0 +1,82 @@
+#SignInContainer {
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .LoginError {
+    color: red;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      align-self: center;
+      margin-top: 15px;
+      margin-right: 35px;
+    }
+
+    .toggle-sign-in {
+      align-self: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.55);
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #SignInBox {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 365px;
+    width: 650px;
+    padding: 25px 50px 25px 25px;
+
+    // box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+
+    #box-stripe {
+      background-color: rgba(21, 168, 106, 1);
+      height: 100%;
+      width: 35px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+
+  #SignUpBox {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 650px;
+    width: 365px;
+    padding: 25px 25px 50px 25px;
+    position: relative;
+    // box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.4);
+
+    #box-stripe {
+      background-color: rgba(21, 168, 106, 1);
+      position: absolute;
+      height: 35px;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+}

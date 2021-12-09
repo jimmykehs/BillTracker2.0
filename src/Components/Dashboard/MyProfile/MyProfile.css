@@ -1,0 +1,22 @@
+#NotificationSettings,
+#ResetPassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#MyProfileContainer {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 250px;
+  padding-bottom: 125px;
+}
+/*# sourceMappingURL=MyProfile.css.map */

@@ -89,6 +89,7 @@ const AddBills = ({ bills, setBills }) => {
             htmlFor="addBillPrice"
             type="number"
             value={bill_price}
+            pattern="^[0-9]*\.[0-9]{2}$ or ^[0-9]*\.[0-9][0-9]$"
             step=".01"
             onChange={(e) => setBillPrice(e.target.value)}
           ></input>

@@ -11,6 +11,7 @@ const Bill = ({ bill, index, setBills, bills }) => {
   const [bill_price, setBillPrice] = useState(bill.bill_price);
   const [bill_paid, setBillPaid] = useState(bill.bill_paid);
   const [editMode, setEditMode] = useState(false);
+  const [error, setError] = useState("");
 
   const token = localStorage.getItem("BillTrackerJWT");
 
@@ -28,6 +29,10 @@ const Bill = ({ bill, index, setBills, bills }) => {
 
   async function submitUpdate() {
     try {
+      if (error) {
+        alert(error);
+        return;
+      }
       const updateData = {
         bill_name,
         bill_link,
@@ -44,6 +49,22 @@ const Bill = ({ bill, index, setBills, bills }) => {
       const newBills = [...bills];
       newBills.splice(index, 1, data);
       setBills(newBills.sort((a, b) => a.bill_due_date - b.bill_due_date));
+      setEditMode(false);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function updateButton() {
+    try {
+      const updateData = {
+        bill_paid: !bill_paid,
+      };
+      await axios.patch(
+        `/api/bill/${bill.bill_id}`,
+        { updateData },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
     } catch (error) {
       console.log(error);
     }
@@ -92,10 +113,18 @@ const Bill = ({ bill, index, setBills, bills }) => {
           <td className="priceColumn">
             $
             <input
-              type="number"
+              type="text"
               placeholder={bill_price}
               onChange={(e) => {
-                setBillPrice(e.target.value);
+                console.log(e.target.value);
+                const re = /^[0-9]+\.[0-9]{2}$/;
+                console.log(e.target.value.match(re));
+                if (e.target.value.match(re)) {
+                  setError("");
+                  setBillPrice(e.target.value);
+                } else {
+                  setError("Price must be in x.xx format");
+                }
               }}
             />
           </td>
@@ -126,7 +155,6 @@ const Bill = ({ bill, index, setBills, bills }) => {
               alt="Edit Bill"
               onClick={async () => {
                 await submitUpdate();
-                setEditMode(false);
               }}
             />
             <img
@@ -145,9 +173,26 @@ const Bill = ({ bill, index, setBills, bills }) => {
           <td className="priceColumn">${bill_price}</td>
           <td className="statusColumn">
             {bill_paid ? (
-              <button className="billPaidButton">PAID</button>
+              <button
+                className="billPaidButton"
+                onClick={async () => {
+                  setBillPaid(!bill_paid);
+
+                  await updateButton();
+                }}
+              >
+                PAID
+              </button>
             ) : (
-              <button className="billUnpaidButton">UNPAID</button>
+              <button
+                className="billUnpaidButton"
+                onClick={async () => {
+                  setBillPaid(!bill_paid);
+                  await updateButton();
+                }}
+              >
+                UNPAID
+              </button>
             )}
           </td>
           <td className="optionsColumn">

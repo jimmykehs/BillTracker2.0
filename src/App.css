@@ -34,6 +34,11 @@ input[type="checkbox"] {
   margin-left: 30px;
 }
 
+.submitFormButton:hover {
+  cursor: pointer;
+  background-color: #179c65;
+}
+
 .formGroup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,5 +62,55 @@ input[type="checkbox"] {
 label {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.55);
+}
+
+.error {
+  color: red;
+  padding: 10px;
+  -webkit-animation: fadeInOut 2s ease forwards;
+          animation: fadeInOut 2s ease forwards;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.success {
+  color: green;
+  padding: 10px;
+  -webkit-animation: fadeInOut 2s ease forwards;
+          animation: fadeInOut 2s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

@@ -9,9 +9,13 @@ const NotificationSettings = ({ user, setUser }) => {
   );
   const [textAlerts, setTextAlerts] = useState(user.text_alerts);
   const [emailAlerts, setEmailAlerts] = useState(user.email_alerts);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   async function updateUserSettings() {
     try {
+      setSuccess("");
+      setError("");
       const updateData = {
         email,
         phone_number: phone,
@@ -28,7 +32,9 @@ const NotificationSettings = ({ user, setUser }) => {
           },
         }
       );
+      setSuccess("Notification settings successfully changed!");
     } catch (error) {
+      setError("Error changing notification settings");
       console.log(error);
     }
   }
@@ -95,6 +101,8 @@ const NotificationSettings = ({ user, setUser }) => {
         </div>
         <button className="submitFormButton">Update Info</button>
       </form>
+      {error ? <p className="error">{error}</p> : ""}
+      {success ? <p className="success">{success}</p> : ""}
     </div>
   );
 };

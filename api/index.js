@@ -33,7 +33,7 @@ apiRouter.use("/user", userRouter);
 apiRouter.use("/bill", billRouter);
 apiRouter.use((err, req, res, next) => {
   console.log(`ERR MIDDLEWARE \n`, err);
-  res.send({ name: err.name, error: err.error });
+  res.status(500).send({ name: err.name, error: err.error });
 });
 
 module.exports = { apiRouter };

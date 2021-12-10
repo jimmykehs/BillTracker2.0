@@ -29,6 +29,7 @@ userRouter.get("/me", async (req, res, next) => {
 userRouter.post("/register", async (req, res, next) => {
   try {
     const { user } = req.body;
+    user.username = user.username.toLowerCase();
     user.password = await bcrypt.hash(user.password, 10);
     const newUser = await createUser(user);
     const token = jwt.sign(
@@ -60,6 +61,7 @@ userRouter.post("/register", async (req, res, next) => {
 userRouter.post("/login", async (req, res, next) => {
   try {
     const { user } = req.body;
+    user.username = user.username.toLowerCase();
     const existingUser = await getUserByUsername(user.username);
 
     if (!existingUser) {

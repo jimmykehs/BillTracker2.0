@@ -148,7 +148,7 @@
 #mainContent #allBills {
   margin-top: 40px;
   height: 75%;
-  width: 45%;
+  width: 75%;
   min-width: 650px;
   overflow: scroll;
   overscroll-behavior: none;
@@ -170,7 +170,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #ededed;
+  background-color: #e3e3e3;
   font-size: 24px;
 }
 
@@ -185,15 +185,18 @@
 }
 
 #mainContent #allBills table .nameColumn,
-#mainContent #allBills table .optionsColumn {
-  width: 200px;
+#mainContent #allBills table .optionsColumn,
+#mainContent #allBills table .statusColumn {
+  width: 250px;
 }
 
-#mainContent #allBills table .priceColumn {
+#mainContent #allBills table .priceColumn,
+#mainContent #allBills table .dateColumn {
   width: 150px;
 }
 
-#mainContent #allBills table .priceColumn input {
+#mainContent #allBills table .priceColumn input,
+#mainContent #allBills table .dateColumn input {
   width: 80%;
 }
 

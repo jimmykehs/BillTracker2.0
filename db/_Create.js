@@ -4,6 +4,7 @@ const { createArgumentString } = require("./functions.js");
 
 async function createUser(user) {
   try {
+    user.username = user.username.toLowerCase();
     const KEYS = Object.keys(user).join(",");
     const VALUES = Object.values(user);
     const ARGUMENT_STRING = createArgumentString(VALUES);

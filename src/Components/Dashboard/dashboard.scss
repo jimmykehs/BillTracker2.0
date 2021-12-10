@@ -108,7 +108,7 @@
   #allBills {
     margin-top: 40px;
     height: 75%;
-    width: 45%;
+    width: 75%;
     min-width: 650px;
     overflow: scroll;
     overscroll-behavior: none;
@@ -126,7 +126,7 @@
         text-align: left;
         position: sticky;
         top: 0;
-        background-color: #ededed;
+        background-color: #e3e3e3;
         font-size: 24px;
       }
 
@@ -141,11 +141,13 @@
       }
 
       .nameColumn,
-      .optionsColumn {
-        width: 200px;
+      .optionsColumn,
+      .statusColumn {
+        width: 250px;
       }
 
-      .priceColumn {
+      .priceColumn,
+      .dateColumn {
         width: 150px;
         input {
           width: 80%;

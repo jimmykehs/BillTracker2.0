@@ -73,7 +73,7 @@ const Bill = ({ bill, index, setBills, bills }) => {
             />
             <input
               type="text"
-              placeholder={bill_link}
+              placeholder={bill_link === "" ? "Bill Link" : bill_link}
               onChange={(e) => {
                 setBillLink(e.target.value);
               }}
@@ -129,7 +129,13 @@ const Bill = ({ bill, index, setBills, bills }) => {
                 setEditMode(false);
               }}
             />
-            <img src={Trash} alt="Delete Bill" />
+            <img
+              src={Trash}
+              alt="Delete Bill"
+              onClick={async () => {
+                await deleteBill();
+              }}
+            />
           </td>
         </tr>
       ) : (

@@ -43,6 +43,7 @@ async function getUserByUsername(username) {
 
 async function getBillsByDate(user_id, bill_date) {
   try {
+    console.log(user_id, bill_date);
     const query =
       "SELECT * FROM bills WHERE user_id = $1 AND bill_due_date = $2;";
     const { rows } = await client.query(query, [user_id, bill_date]);

@@ -92,4 +92,12 @@
   bottom: 0;
   border-radius: 0px 0px 10px 10px;
 }
+
+@media screen and (max-width: 600px) {
+  #SignInBox,
+  #SignUpBox {
+    -webkit-transform: scale(0.55);
+            transform: scale(0.55);
+  }
+}
 /*# sourceMappingURL=UserLogin.css.map */

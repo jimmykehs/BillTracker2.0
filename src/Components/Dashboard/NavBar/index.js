@@ -22,43 +22,45 @@ const NavBar = ({ hidePaid, setHidePaid }) => {
       exit={{ opacity: 0 }}
     >
       <h1>Jim's Bill Tracker</h1>
-
-      <div className="navItem">
-        <div className="mainItem">
-          <img src={bill} alt={"Bill"} /> <Link to="/dashboard">My Bills</Link>
-        </div>
-        {location.pathname === "/dashboard" && (
-          <div className="subItems">
-            <div className="HidePaidBillsContainer">
-              <label htmlFor="HidePaidBills">Hide Paid</label>
-              <input
-                type="checkbox"
-                checked={hidePaid}
-                onChange={() => setHidePaid(!hidePaid)}
-              />
-            </div>
+      <div className="navItems">
+        <div className="navItem">
+          <div className="mainItem">
+            <img src={bill} alt={"Bill"} />{" "}
+            <Link to="/dashboard">My Bills</Link>
           </div>
-        )}
-      </div>
-
-      <div className="navItem">
-        <div className="mainItem">
-          <img src={user} alt={"User"} />{" "}
-          <Link to="/myProfile">My Profile</Link>
+          {location.pathname === "/dashboard" && (
+            <div className="subItems">
+              <div className="HidePaidBillsContainer">
+                <label htmlFor="HidePaidBills">Hide Paid</label>
+                <input
+                  type="checkbox"
+                  checked={hidePaid}
+                  onChange={() => setHidePaid(!hidePaid)}
+                />
+              </div>
+            </div>
+          )}
         </div>
-      </div>
 
-      <div className="navItem logout">
-        <div className="mainItem">
-          <img src={logout} alt={"Logout"} />{" "}
-          <button
-            id="logout-btn"
-            onClick={() => {
-              handleLogout();
-            }}
-          >
-            Logout
-          </button>
+        <div className="navItem">
+          <div className="mainItem">
+            <img src={user} alt={"User"} />{" "}
+            <Link to="/myProfile">My Profile</Link>
+          </div>
+        </div>
+
+        <div className="navItem logout">
+          <div className="mainItem">
+            <img src={logout} alt={"Logout"} />{" "}
+            <button
+              id="logout-btn"
+              onClick={() => {
+                handleLogout();
+              }}
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>

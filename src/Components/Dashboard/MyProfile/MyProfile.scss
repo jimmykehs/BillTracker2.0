@@ -29,3 +29,27 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  #MyProfileContainer {
+    padding: 200px 0 0 0;
+
+    #NotificationSettings,
+    #ResetPassword {
+      margin: 50px;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #MyProfileContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 600px;
+    #NotificationSettings,
+    #ResetPassword {
+      margin: 50px;
+    }
+  }
+}

@@ -56,13 +56,13 @@ const SignUp = ({ setSignInMethod }) => {
           />
         </div>
         <div className="formGroup">
-          <label htmlFor="password-signup"> Confirm Password*</label>
-          <input id="password-signup" type="password" required />
+          <label htmlFor="confirm-password-signup"> Confirm Password*</label>
+          <input id="confirm-password-signup" type="password" required />
         </div>
         <div className="formGroup">
-          <label htmlFor="password-signup">Email*</label>
+          <label htmlFor="email-signup">Email*</label>
           <input
-            id="password-signup"
+            id="email-signup"
             type="email"
             required
             value={email}
@@ -70,9 +70,9 @@ const SignUp = ({ setSignInMethod }) => {
           />
         </div>
         <div className="formGroup">
-          <label htmlFor="password-signup">Phone Number</label>
+          <label htmlFor="phone-signup">Phone Number</label>
           <input
-            id="password-signup"
+            id="phone-signup"
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}

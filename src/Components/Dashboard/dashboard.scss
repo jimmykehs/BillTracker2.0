@@ -214,3 +214,72 @@
   font-size: 36px;
   padding: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  #navBar {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navItems {
+      display: flex;
+
+      .navItem {
+        margin: 0px 25px;
+        .subItems {
+          display: none;
+        }
+      }
+    }
+
+    .logout {
+      position: initial;
+    }
+  }
+
+  #mainContent {
+    padding: 0px;
+    padding-top: 175px;
+
+    #allBills {
+      height: 60%;
+
+      table {
+        .optionsColumn {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navBar {
+    .navItems {
+      .navItem,
+      .logout {
+        margin: 0;
+        padding: 0;
+      }
+      .mainItem {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  #mainContent {
+    #addBills {
+      transform: scale(0.5);
+    }
+    #allBills {
+      table {
+        transform: scale(0.5);
+      }
+    }
+  }
+}

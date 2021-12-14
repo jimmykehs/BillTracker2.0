@@ -48,4 +48,32 @@
 #MyProfileContainer #ResetPassword form button {
   margin-left: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  #MyProfileContainer {
+    padding: 200px 0 0 0;
+  }
+  #MyProfileContainer #NotificationSettings,
+  #MyProfileContainer #ResetPassword {
+    margin: 50px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #MyProfileContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 600px;
+  }
+  #MyProfileContainer #NotificationSettings,
+  #MyProfileContainer #ResetPassword {
+    margin: 50px;
+  }
+}
 /*# sourceMappingURL=MyProfile.css.map */

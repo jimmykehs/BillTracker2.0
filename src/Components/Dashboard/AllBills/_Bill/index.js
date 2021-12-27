@@ -65,6 +65,7 @@ const Bill = ({ bill, index, setBills, bills }) => {
         { updateData },
         { headers: { Authorization: `Bearer ${token}` } }
       );
+      setBillPaid(!bill_paid);
     } catch (error) {
       console.log(error);
     }
@@ -176,8 +177,6 @@ const Bill = ({ bill, index, setBills, bills }) => {
               <button
                 className="billPaidButton"
                 onClick={async () => {
-                  setBillPaid(!bill_paid);
-
                   await updateButton();
                 }}
               >
@@ -187,7 +186,6 @@ const Bill = ({ bill, index, setBills, bills }) => {
               <button
                 className="billUnpaidButton"
                 onClick={async () => {
-                  setBillPaid(!bill_paid);
                   await updateButton();
                 }}
               >
